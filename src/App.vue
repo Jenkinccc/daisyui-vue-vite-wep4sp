@@ -6,12 +6,8 @@
       </div>
     </div>
     <div class="flex">
-      <div class="tabs tabs-boxed">
-        <a class="tab grow-0">About</a>
-        <a class="tab grow-0 tab-active">Blog</a>
-        <a class="tab grow-0">Project</a>
-        <a class="tab grow-0">Jonrnal</a>
-        <a class="tab grow-0">Comment</a>
+      <div class="tabs tabs-boxed" >
+        <a v-for="(item,index) in TabList" :key="index" class="tab grow-0" :class="this.isTab == index?'tab-active':''" @click="TabEvent(index)">{{item.Name}}</a>
       </div>
     </div>
     <label class="swap swap-rotate">
@@ -55,6 +51,29 @@
     </div>
   </div>
 </template>
+
+<script>
+export default{
+  data(){
+    return{
+      isTab:0,
+      TabList:[
+        {Name:'About'},
+        {Name:'Blog'},
+        {Name:'Project'},
+        {Name:'Jonrnal'},
+        {Name:'Comment'},
+      ]
+    }
+  },
+  methods:{
+    TabEvent(i){
+      this.isTab = i
+    }
+  }
+}
+
+</script>
 
 <style type="text/css">
 .iconpark-icon {
