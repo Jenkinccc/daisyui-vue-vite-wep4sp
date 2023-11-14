@@ -16,6 +16,10 @@ const routes = [
     //     component: () => import("文件路径/文件名.vue")
     // },
     {
+        path:'/',
+        component:about  
+    },
+    {
         path: '/about',
         component: about
     },

@@ -7,10 +7,10 @@
     </div>
     <div class="flex">
       <div class="tabs tabs-boxed">
-        <a v-for="(item, index) in TabList" :key="index" class="tab grow-0"
-          :class="this.isTab == index ? 'tab-active' : ''" @click="TabEvent(index)">
-          <router-link :to="'/'+ item.Name"> {{ item.Name }}</router-link>
-        </a>
+        <div v-for="(item, index) in TabList" :key="index" class="tab grow-0"
+          :class="this.isTab == index ? 'tab-active' : ''" >
+          <router-link @click="TabEvent(index)" :to="'/' + item.Name"> {{ item.Name }}</router-link>
+        </div>
       </div>
     </div>
     <label class="swap swap-rotate">
@@ -32,11 +32,13 @@
   <router-view></router-view>
   <!-- 页面内容 -->
   <footer class="footer footer-center p-4 bg-zinc-50 text-base-content">
-  <aside>
-    <a href="https://www.buymeacoffee.com/jenkinccc" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 157px !important;" ></a>
-    <p>Copyright © 2023 - All right reserved by Jenkin</p>
-  </aside>
-</footer>
+    <aside>
+      <a href="https://www.buymeacoffee.com/jenkinccc" target="_blank"><img
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+          style="height: 40px !important;width: 157px !important;"></a>
+      <p>Copyright © 2023 - All right reserved by Jenkin</p>
+    </aside>
+  </footer>
 </template>
 
 <script>
