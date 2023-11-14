@@ -3,6 +3,7 @@ import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router
 // 1.引入组件
 import about from "./view/about/index.vue";
 import blog from "./view/blog/articles.vue";
+import project from "./view/project/index.vue";
 
 // 2.配置路由映射
 
@@ -15,9 +16,14 @@ const routes = [
     //     name: '路由记录独一无二的名称',
     //     component: () => import("文件路径/文件名.vue")
     // },
+
     {
         path:'/',
         component:about  
+    },
+    {
+        path:'/project',
+        component:project  
     },
     {
         path: '/about',
