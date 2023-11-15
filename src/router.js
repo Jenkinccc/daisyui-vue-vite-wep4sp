@@ -4,6 +4,9 @@ import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router
 import about from "./view/about/index.vue";
 import blog from "./view/blog/articles.vue";
 import project from "./view/project/index.vue";
+import jonrnal from "./view/Jonrnal/index.vue";
+import comment from "./view/Comment/index.vue";
+
 
 // 2.配置路由映射
 
@@ -32,6 +35,14 @@ const routes = [
     {
         path: '/blog',
         component: blog
+    },
+    {
+        path: '/jonrnal',
+        component: jonrnal
+    },
+    {
+        path: '/comment',
+        component: comment
     }
 ]
 
