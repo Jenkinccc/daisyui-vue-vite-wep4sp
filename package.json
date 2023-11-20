@@ -5,6 +5,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.12.2",
     "vue": "^3",
     "vue-router": "^4.2.5"
   },
