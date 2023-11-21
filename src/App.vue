@@ -41,9 +41,17 @@
   <!-- 页面内容 -->
   <footer class="footer footer-center p-4 bg-zinc-50 text-base-content">
     <aside>
-      <a href="https://www.buymeacoffee.com/jenkinccc" target="_blank"><img
-          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
-          style="height: 40px !important;width: 157px !important;"></a>
+      <div class="flex items-center">
+        <div>Thank：</div>
+        <img src="https://atelier-anchor.com/_nuxt/atelier-anchor.light.0f4c1c3b.svg" class="h-10 w-16 mr-4"
+          alt="atelier-anchor" />
+        <img class="h-10 w-8" src="https://img.icons8.com/arcade/64/icons8-cup.png" alt="icons8-cup"/>
+        <div>Sponsor Me：</div>
+        <a href="https://www.buymeacoffee.com/jenkinccc" target="_blank"><img
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
+            style="height: 40px !important;width: 157px !important;"></a>
+      </div>
+
       <p>Copyright © 2023 - All right reserved by Jenkin</p>
     </aside>
   </footer>

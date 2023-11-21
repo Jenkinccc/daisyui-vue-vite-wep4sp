@@ -14,8 +14,8 @@
 				</div>
 			</div>
 			<div>
-				<h1 class="text-5xl font-bold">Jenkin</h1>
-				<p class="py-6">Software designer, founder, and amateur astronaut.</p>
+				<h1 class="text-5xl font-bold hi-jenkin FontUI">Jenkin</h1>
+				<p class="py-6 text-3xl  FontUI">Software designer, founder, and amateur astronaut.</p>
 				<button class="btn btn-primary shadow-lg shadow-green-500/50">Get Started</button>
 			</div>
 		</div>
@@ -34,6 +34,7 @@
 					<img width="36" height="36" src="https://img.icons8.com/3d-fluency/36/layers.png" alt="layers" />Tools
 				</div>
 			</div>
+			
 			<div
 				class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16  border-gray-200 pt-6 sm:mt-8 sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
 				<article class="card shadow-xl image-full justify-between border border-blue-400 ">
@@ -124,6 +125,45 @@
 						</div>
 					</div>
 				</article>
+			</div>
+			<div
+				class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16  border-gray-200 pt-6 sm:mt-8 sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+				<div class="card w-84 bg-primary text-primary-content opacity-60 location-bg">
+					<div class="card-body">
+						<h2 class="card-title flex text-gray-100">
+							<img width="34" height="34" src="https://img.icons8.com/3d-fluency/34/location.png" alt="location"/>
+							Location
+						</h2>
+						<p class="text-gray-200">I'm living in</p>
+						<p class="text-gray-200">Guangdong,China</p>
+						<div class="card-actions justify-end">
+						</div>
+					</div>
+				</div>
+				<div class="card w-84 bg-primary text-primary-content">
+					<div class="card-body">
+						<h2 class="card-title">Card title!</h2>
+						<p>If a dog chews shoes whose shoes does he choose?</p>
+						<div class="card-actions justify-end">
+						</div>
+					</div>
+				</div>
+				<div class="card w-84 bg-primary text-primary-content">
+					<div class="card-body">
+						<h2 class="card-title">Card title!</h2>
+						<p>If a dog chews shoes whose shoes does he choose?</p>
+						<div class="card-actions justify-end">
+						</div>
+					</div>
+				</div>
+				<div class="card w-84 bg-primary text-primary-content">
+					<div class="card-body">
+						<h2 class="card-title">Card title!</h2>
+						<p>If a dog chews shoes whose shoes does he choose?</p>
+						<div class="card-actions justify-end">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -237,7 +277,7 @@ export default {
 	data() {
 		return {
 			hoverIndex: -1, // 初始时没有按钮被悬停
-
+			
 			SocialIcons: [
 				{ Name: "Github", Icon: '#github-one', IDkey: '001' },
 				{ Name: "Linkedin", Icon: '#linkedin', IDkey: '002' },
@@ -267,8 +307,8 @@ export default {
 	setup() {
 		const box = ref(null);
 		const box2 = ref(null);
-
 		onMounted(() => {
+			gsap.to('.hi-jenkin',{y:-30,opacity:0.9,duration: 2,});
 			gsap.from(box.value, {
 				scrollTrigger: {
 					trigger: box.value,
@@ -302,20 +342,21 @@ export default {
 
 button {}
 
-.red-dot {
-	z-index: 9999;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100px;
-	height: 100px;
+div{
+	font-family: SmileySans;
+}
 
+.location-bg{
+	background-image: url('../../../resource/location.png');
+	background-size: 16em;
 }
 
 .box {}
 
 .box2 {}
-
+.hi-jenkin{
+	opacity:0.2
+}
 
 .iconpark-icon {
 	width: 1em;
