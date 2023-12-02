@@ -2,7 +2,38 @@
 	<div class="hero min-h-screen ">
 		<div class="hero-content flex-col lg:flex-row-reverse">
 			<div>
-				<img src="/resource/portrait.webp" class="mask mask-squircle max-w-sm rounded-lg shadow-2xl" />
+				<!-- <video width="320" height="240" loop muted>
+					<source src="/resource/7883.mp4" type="video/mp4">
+				</video> -->
+				<div class="container2">
+					<div class="hi-memoji">
+						<video class="h-[190px] w-[190px] md:h-[210px] md:w-[210px]" muted autoplay="" loop=""
+							playsinline="">
+							<source src="/resource/7885.mp4" type="video/mp4">Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="circle class1">
+						<div class="inner-circle">
+							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/weixing.png"
+								alt="weixing" />
+						</div>
+					</div>
+					<div class="circle class2">
+						<div class="inner-circle">
+							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/facebook-messenger.png"
+								alt="facebook-messenger" />
+						</div>
+					</div>
+					<div class="circle class3">
+						<div class="inner-circle">
+							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/github.png"
+								alt="github" />
+						</div>
+					</div>
+				</div>
+
+
+				<!-- <img src="/resource/portrait.webp" class="mask mask-squircle max-w-sm rounded-lg shadow-2xl" /> -->
 				<div v-for="(item, index) in SocialIcons" :key="index" class="flex items-center mt-6 ml-5">
 					<svg class="iconpark-icon text-2xl">
 						<use :href="item.Icon"></use>
@@ -14,13 +45,21 @@
 				</div>
 			</div>
 			<div>
-				<h1 class="text-5xl font-bold hi-jenkin FontUI">Jenkin</h1>
-				<p class="py-6 text-3xl  FontUI">Software designer, founder, and amateur astronaut.</p>
+				<h1 class="text-5xl font-bold hi-jenkin FontUI group">
+					Hi✋, I'm
+					<span class="text-yellow-600">Jenkin</span>.
+				</h1>
+				<div class="py-6 text-3xl  FontUI">
+					<div class="text-sky-500">Web Developer. </div>
+					<div class="text-rose-500">Software designer.</div>
+					<div class="text-teal-500">Independent Developer </div>
+					and
+					<div class="text-lime-700">Tech Enthusiast，</div>
+				</div>
 				<button class="btn btn-primary shadow-lg shadow-green-500/50">Get Started</button>
 			</div>
 		</div>
 	</div>
-
 	<section class="dark:bg-gray-500 dark:text-gray-100">
 		<div class="container px-6 py-12 mx-auto">
 			<div class="text-3xl font-bold flex">
@@ -34,7 +73,7 @@
 					<img width="36" height="36" src="https://img.icons8.com/3d-fluency/36/layers.png" alt="layers" />Tools
 				</div>
 			</div>
-			
+
 			<div
 				class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16  border-gray-200 pt-6 sm:mt-8 sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
 				<article class="card shadow-xl image-full justify-between border border-blue-400 ">
@@ -115,23 +154,32 @@
 							</div>
 						</div>
 						<div class="group relative flex flex-wrap">
-							<block v-for="(item, index) in Tools" :key="index">
-								<div class="mt-2 mr-2 line-clamp-3 text-sm leading-4 text-gray-50">
+							<div v-for="(item, index) in Tools" :key="index" class="dropdown">
+								<div :tabindex="index" role="button"
+									class="mt-2 mr-2 line-clamp-3 text-sm leading-4 text-gray-50">
 									<button :class="item.bcolor" class="btn btn-circle btn-outline ">
 										<div :class="item.icon"></div>
 									</button>
 								</div>
-							</block>
+								<div :tabindex="index"
+									class="dropdown-content z-[1] card card-compact w-64 p-2 shadow bg-base-content text-primary-content">
+									<div class="card-body">
+										<h3 class="card-title text-gray-50">{{ item.title }}</h3>
+										<p class="text-gray-50">{{ item.desc }}</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</article>
 			</div>
 			<div
 				class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16  border-gray-200 pt-6 sm:mt-8 sm:pt-8 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-				<div class="card w-84 bg-primary text-primary-content opacity-60 location-bg">
+				<div class="card w-84 bg-primary text-primary-content opacity-80 location-bg">
 					<div class="card-body">
 						<h2 class="card-title flex text-gray-100">
-							<img width="34" height="34" src="https://img.icons8.com/3d-fluency/34/location.png" alt="location"/>
+							<img width="34" height="34" src="https://img.icons8.com/3d-fluency/34/location.png"
+								alt="location" />
 							Location
 						</h2>
 						<p class="text-gray-200">I'm living in</p>
@@ -140,18 +188,27 @@
 						</div>
 					</div>
 				</div>
-				<div class="card w-84 bg-primary text-primary-content">
+				<div class="card w-84 bg-slate-300 text-primary-content">
 					<div class="card-body">
-						<h2 class="card-title">Card title!</h2>
-						<p>If a dog chews shoes whose shoes does he choose?</p>
+						<h2 class="card-title flex text-gray-700">
+							<img width="45" height="45" src="https://img.icons8.com/fluency/45/apple-fitness.png"
+								alt="apple-fitness" />
+							Sport
+						</h2>
+						<p>I use Apple Fitness </p>
+						<p>to improve my exercise.</p>
 						<div class="card-actions justify-end">
 						</div>
 					</div>
 				</div>
-				<div class="card w-84 bg-primary text-primary-content">
+				<div class="card w-84 bg-gray-950 text-primary-content">
 					<div class="card-body">
-						<h2 class="card-title">Card title!</h2>
-						<p>If a dog chews shoes whose shoes does he choose?</p>
+						<h2 class="card-title flex text-gray-200">
+							<img width="34" height="34" src="https://img.icons8.com/3d-fluency/34/scroll.png"
+								alt="scroll" />
+							Rusume
+						</h2>
+						<p class="text-gray-300">Open Jenkin Rusume/CV</p>
 						<div class="card-actions justify-end">
 						</div>
 					</div>
@@ -172,9 +229,8 @@
 			<div class="grid items-center gap-4 xl:grid-cols-5">
 				<div class="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
 					<!-- <h2 class="text-4xl font-bold">Duo assum utroque appetere an</h2> -->
-					<img class="mx-4" width="141" height="141"
-						src="https://img.icons8.com/3d-fluency/141/collaboration-female-male--v4.png"
-						alt="collaboration-female-male--v4" />
+					<img class="mx-4" width="141" height="141" src="https://img.icons8.com/3d-fluency/141/chat.png"
+						alt="chat.png" />
 					<p class="dark:text-gray-400 text-4xl font-bold mx-3">That's what they say about Jenkin.</p>
 				</div>
 				<div class="p-6 xl:col-span-3">
@@ -277,7 +333,8 @@ export default {
 	data() {
 		return {
 			hoverIndex: -1, // 初始时没有按钮被悬停
-			
+			menu: ["Home", "About", "Services", "Careers", "Prices", "Contact"],
+			colors: ["#ee6055", "#ff9b85", "#ffd97d", "#60d394", "#348aa7"],
 			SocialIcons: [
 				{ Name: "Github", Icon: '#github-one', IDkey: '001' },
 				{ Name: "Linkedin", Icon: '#linkedin', IDkey: '002' },
@@ -286,20 +343,20 @@ export default {
 				{ Name: "Mail", Icon: '#maill-one', IDkey: '005' },
 			],
 			Tools: [
-				{ icon: 'icons8-bing', bcolor: 'text-blue-400' },
-				{ icon: 'icons8-notion', bcolor: 'text-gray-300' },
-				{ icon: 'icons8-chatgpt', bcolor: 'text-teal-200' },
-				{ icon: 'icons8-vscode', bcolor: 'text-blue-500' },
-				{ icon: 'icons8-twitterx', bcolor: 'text-neutral-800' },
-				{ icon: 'icons8-github', bcolor: 'text-neutral-900' },
-				{ icon: 'icons8-stack-overflow', bcolor: 'text-red-400' },
-				{ icon: 'icons8-youtube', bcolor: 'text-red-400' },
-				{ icon: 'icons8-duckduckgo', bcolor: 'text-teal-200' },
-				{ icon: 'icons8-dribbble', bcolor: 'text-red-400' },
-				{ icon: 'icons8-linkedin', bcolor: 'text-blue-400' },
-				{ icon: 'icons8-powerpoint', bcolor: 'text-orange-600' },
-				{ icon: 'icons8-photoshop', bcolor: 'text-blue-600' },
-				{ icon: 'icons8-illustrator', bcolor: 'text-orange-400' },
+				{ icon: 'icons8-bing', bcolor: 'text-blue-400', title: 'Bing', desc: '强大的搜索工具' },
+				{ icon: 'icons8-notion', bcolor: 'text-gray-300', title: 'Notion', desc: '用来做项目管理，也适合做个人知识库' },
+				{ icon: 'icons8-chatgpt', bcolor: 'text-teal-200', title: 'ChatGPT', desc: '生产力工具，无需多言' },
+				{ icon: 'icons8-vscode', bcolor: 'text-blue-500', title: 'VsCode', desc: '代码工程师们最喜爱的轻量编辑器' },
+				{ icon: 'icons8-twitterx', bcolor: 'text-neutral-800', title: 'X', desc: '原Twitter，获取世界最新趋势和科技热点的社交媒体' },
+				{ icon: 'icons8-github', bcolor: 'text-neutral-900', title: 'Github', desc: '源代码托管服务平台，有各种开源项目可以学习' },
+				{ icon: 'icons8-stack-overflow', bcolor: 'text-red-400', title: 'StackOverflow', desc: '开发人员社区' },
+				{ icon: 'icons8-youtube', bcolor: 'text-red-400', title: 'YouTube', desc: '全球最大的视频媒体，可以在上面学习各种创意和技术' },
+				{ icon: 'icons8-duckduckgo', bcolor: 'text-teal-200', title: 'duckduckgo', desc: '保护隐私的搜索引擎' },
+				{ icon: 'icons8-dribbble', bcolor: 'text-red-400', title: 'dribbble', desc: '设计社区' },
+				{ icon: 'icons8-linkedin', bcolor: 'text-blue-400', title: 'linkedin', desc: '职业社交软件，在上面可以关注一些海外大佬的动态' },
+				{ icon: 'icons8-powerpoint', bcolor: 'text-orange-600', title: 'powerpoint', desc: '幻灯片展示，项目路演' },
+				{ icon: 'icons8-photoshop', bcolor: 'text-blue-600', title: 'photoshop', desc: '图像编辑工具' },
+				{ icon: 'icons8-illustrator', bcolor: 'text-orange-400', title: 'illustrator', desc: '插画设计工具' },
 
 			]
 		}
@@ -308,7 +365,59 @@ export default {
 		const box = ref(null);
 		const box2 = ref(null);
 		onMounted(() => {
-			gsap.to('.hi-jenkin',{y:-30,opacity:0.9,duration: 2,});
+			gsap.from('.hi-memoji', {
+				duration: 2,
+				scale: 0.5,
+				ease: "back.out(1.4)",
+				stagger: 0.4,
+			});
+			//创建一个时间轴对象
+			var tl = gsap.timeline();
+			gsap.from('.class1', {
+				duration: 1,
+				scale: 0,
+				ease: "back.out(1.7)",
+				stagger: 0.9,
+			});
+			gsap.from('.class2', {
+				duration: 1,
+				scale: 0,
+				ease: "back.out(1.7)",
+				stagger: 0.7,
+			});
+			gsap.from('.class3', {
+				duration: 1,
+				scale: 0,
+				ease: "back.out(1.7)",
+				stagger: 0.2,
+			});
+			// gsap.to('.class1', { y: -60, scale: 0, duration: 1, });
+			tl.to(".class1", {
+				duration: 14,             // 持续时间
+				rotate: 360,             // 旋转
+				transformOrigin: "50% 50%",  // 旋转的中心点在元素的中心
+				repeat: -1,              // 无限重复动画
+				ease: "linear",
+			});
+			tl.to(".class2", {
+				duration: 14,
+				rotate: 360,
+				transformOrigin: "50% 50%",
+				repeat: -1,
+				ease: "linear",
+
+			}, "-=16");
+			tl.to(".class3", {
+				duration: 14,
+				rotate: 360,
+				transformOrigin: "50% 50%",
+				repeat: -1,
+				ease: "linear",
+
+			}, "-=17");
+
+			// gsap.to('.hi-memoji', { y: -60, opacity: 1, duration: 1, });
+			gsap.to('.hi-jenkin', { y: -30, opacity: 0.9, duration: 1.5, });
 			gsap.from(box.value, {
 				scrollTrigger: {
 					trigger: box.value,
@@ -342,11 +451,11 @@ export default {
 
 button {}
 
-div{
+div {
 	font-family: SmileySans;
 }
 
-.location-bg{
+.location-bg {
 	background-image: url('../../../resource/location.png');
 	background-size: 16em;
 }
@@ -354,8 +463,9 @@ div{
 .box {}
 
 .box2 {}
-.hi-jenkin{
-	opacity:0.2
+
+.hi-jenkin {
+	opacity: 0.2
 }
 
 .iconpark-icon {
@@ -364,4 +474,39 @@ div{
 	/* <!-- your css code --> */
 	/* <!-- ... --> */
 }
-</style>
+
+.container2 {
+	width: 300px;
+	height: 300px;
+	/* min-height: 300px; */
+	position: relative;
+	display: grid;
+	place-items: center;
+	pointer-events: none;
+}
+
+.circle {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	/* pointer-events: none; */
+	/* transition: 550ms ease; */
+}
+
+.inner-circle {
+	position: absolute;
+	width: 40px;
+	border-radius: 100%;
+	/* aspect-ratio: 1; */
+	top: 0;
+	/* display: grid; */
+	place-items: center;
+	/* pointer-events: auto; */
+	/* transition: background 350ms ease, color 350ms ease-in-out; */
+}
+
+.inner-circle:hover {
+	background-color: coral;
+	color: white;
+}</style>
