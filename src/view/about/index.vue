@@ -12,6 +12,7 @@
 							<source src="/resource/7885.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>
 					</div>
+					
 					<div class="circle class1">
 						<div class="inner-circle">
 							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/weixing.png"
@@ -28,6 +29,21 @@
 						<div class="inner-circle">
 							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/github.png"
 								alt="github" />
+						</div>
+					</div>
+					<div class="circle class4">
+						<div class="inner-circle">
+							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/spotify.png" alt="spotify"/>
+						</div>
+					</div>
+					<div class="circle class5">
+						<div class="inner-circle">
+							<img width="47" height="47" src="https://cdn.jim-nielsen.com/macos/64/messages-2021-05-25.png" alt="imessage"/>
+						</div>
+					</div>
+					<div class="circle class6">
+						<div class="inner-circle">
+							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/instagram-new.png" alt="instagram-new"/>
 						</div>
 					</div>
 				</div>
@@ -391,6 +407,24 @@ export default {
 				ease: "back.out(1.7)",
 				stagger: 0.2,
 			});
+			gsap.from('.class4', {
+				duration: 1,
+				scale: 0,
+				ease: "back.out(1.7)",
+				stagger: 0.2,
+			});
+			gsap.from('.class5', {
+				duration: 1,
+				scale: 0,
+				ease: "back.out(1.7)",
+				stagger: 0.2,
+			});
+			gsap.from('.class6', {
+				duration: 1,
+				scale: 0,
+				ease: "back.out(1.7)",
+				stagger: 0.2,
+			});
 			// gsap.to('.class1', { y: -60, scale: 0, duration: 1, });
 			tl.to(".class1", {
 				duration: 14,             // 持续时间
@@ -406,7 +440,7 @@ export default {
 				repeat: -1,
 				ease: "linear",
 
-			}, "-=16");
+			}, "-=15");
 			tl.to(".class3", {
 				duration: 14,
 				rotate: 360,
@@ -415,7 +449,30 @@ export default {
 				ease: "linear",
 
 			}, "-=17");
+			tl.to(".class4", {
+				duration: 14,
+				rotate: 360,
+				transformOrigin: "50% 50%",
+				repeat: -1,
+				ease: "linear",
 
+			}, "-=19");
+			tl.to(".class5", {
+				duration: 14,
+				rotate: 360,
+				transformOrigin: "50% 50%",
+				repeat: -1,
+				ease: "linear",
+
+			}, "-=13");
+			tl.to(".class6", {
+				duration: 14,
+				rotate: 360,
+				transformOrigin: "50% 50%",
+				repeat: -1,
+				ease: "linear",
+
+			}, "-=11");
 			// gsap.to('.hi-memoji', { y: -60, opacity: 1, duration: 1, });
 			gsap.to('.hi-jenkin', { y: -30, opacity: 0.9, duration: 1.5, });
 			gsap.from(box.value, {
