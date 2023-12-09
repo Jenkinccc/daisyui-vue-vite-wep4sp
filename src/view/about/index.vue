@@ -21,8 +21,7 @@
 					</div>
 					<div class="circle class2">
 						<div class="inner-circle">
-							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/facebook-messenger.png"
-								alt="facebook-messenger" />
+							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/filled-message.png" alt="filled-message"/>
 						</div>
 					</div>
 					<div class="circle class3">
@@ -46,9 +45,18 @@
 							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/instagram-new.png" alt="instagram-new"/>
 						</div>
 					</div>
+					<div class="circle class7">
+						<div class="inner-circle">
+							<img width="47" height="47" src="https://img.icons8.com/3d-fluency/47/twitter-circled.png" alt="twitter-circled"/>
+						</div>
+					</div>
+					
+					<div class="circle class8">
+						<div class="inner-circle">
+							<img width="47" height="47" src="https://cdn.jim-nielsen.com/macos/64/mail-2021-05-25.png" alt="mail"/>
+						</div>
+					</div>
 				</div>
-
-
 				<!-- <img src="/resource/portrait.webp" class="mask mask-squircle max-w-sm rounded-lg shadow-2xl" /> -->
 				<div v-for="(item, index) in SocialIcons" :key="index" class="flex items-center mt-6 ml-5">
 					<svg class="iconpark-icon text-2xl">
@@ -367,6 +375,7 @@ export default {
 				{ icon: 'icons8-github', bcolor: 'text-neutral-900', title: 'Github', desc: '源代码托管服务平台，有各种开源项目可以学习' },
 				{ icon: 'icons8-stack-overflow', bcolor: 'text-red-400', title: 'StackOverflow', desc: '开发人员社区' },
 				{ icon: 'icons8-youtube', bcolor: 'text-red-400', title: 'YouTube', desc: '全球最大的视频媒体，可以在上面学习各种创意和技术' },
+				{ icon: 'icons8-figma', bcolor: 'text-green-400', title: 'figma', desc: '优秀的产品设计工具' },
 				{ icon: 'icons8-duckduckgo', bcolor: 'text-teal-200', title: 'duckduckgo', desc: '保护隐私的搜索引擎' },
 				{ icon: 'icons8-dribbble', bcolor: 'text-red-400', title: 'dribbble', desc: '设计社区' },
 				{ icon: 'icons8-linkedin', bcolor: 'text-blue-400', title: 'linkedin', desc: '职业社交软件，在上面可以关注一些海外大佬的动态' },
@@ -425,6 +434,18 @@ export default {
 				ease: "back.out(1.7)",
 				stagger: 0.2,
 			});
+			gsap.from('.class7', {
+				duration: 1,
+				scale: 0,
+				ease: "back.out(1.7)",
+				stagger: 0.2,
+			});
+			gsap.from('.class8', {
+				duration: 1,
+				scale: 0,
+				ease: "back.out(1.7)",
+				stagger: 0.2,
+			});
 			// gsap.to('.class1', { y: -60, scale: 0, duration: 1, });
 			tl.to(".class1", {
 				duration: 14,             // 持续时间
@@ -473,6 +494,22 @@ export default {
 				ease: "linear",
 
 			}, "-=11");
+			tl.to(".class7", {
+				duration: 14,
+				rotate: 360,
+				transformOrigin: "50% 50%",
+				repeat: -1,
+				ease: "linear",
+
+			}, "-=20");
+			tl.to(".class8", {
+				duration: 14,
+				rotate: 360,
+				transformOrigin: "50% 50%",
+				repeat: -1,
+				ease: "linear",
+
+			}, "-=29");
 			// gsap.to('.hi-memoji', { y: -60, opacity: 1, duration: 1, });
 			gsap.to('.hi-jenkin', { y: -30, opacity: 0.9, duration: 1.5, });
 			gsap.from(box.value, {
